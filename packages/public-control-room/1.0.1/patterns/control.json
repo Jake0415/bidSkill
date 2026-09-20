@@ -1,0 +1,20 @@
+{
+  "pattern_id": "control-summary",
+  "family": "MAIN",
+  "supported_purposes": ["LANDING_DASHBOARD"],
+  "regions": [
+    {"region_id": "overview", "columns": 12, "order": 1},
+    {"region_id": "status", "columns": 6, "order": 2},
+    {"region_id": "notifications", "columns": 6, "order": 3}
+  ],
+  "blocks": [
+    {"block_id": "headline", "region_id": "overview", "component": "summary-stats", "content_role": "project_kpis"},
+    {"block_id": "status-list", "region_id": "status", "component": "data-table", "content_role": "project_status"},
+    {"block_id": "notice-list", "region_id": "notifications", "component": "notice-list", "content_role": "project_notifications"}
+  ],
+  "content_requirements": ["Use confirmed project content IDs; never copy source-site records", "Label synthetic examples and show update time"],
+  "interaction_requirements": ["Existing status-item selection may navigate only to a confirmed detail route", "GIS is optional and requires a separate supported provider/data contract"],
+  "responsive_rules": [{"status": "PROPOSED", "condition": "narrow viewport", "behavior": "Stack overview, status and notifications in reading order; verify rendered output"}],
+  "required_capabilities": ["grouped-layout"],
+  "source_evidence_ids": ["OBS-CONTROL"]
+}
