@@ -1,0 +1,18 @@
+{
+  "pattern_id": "admin-sections",
+  "family": "BUSINESS",
+  "supported_purposes": ["SETTINGS"],
+  "regions": [
+    {"region_id": "settings", "columns": 12, "order": 1},
+    {"region_id": "actions", "columns": 12, "order": 2}
+  ],
+  "blocks": [
+    {"block_id": "setting-sections", "region_id": "settings", "component": "form-sections", "content_role": "confirmed_settings"},
+    {"block_id": "save-cancel", "region_id": "actions", "component": "action-bar", "content_role": "confirmed_save_scope"}
+  ],
+  "content_requirements": ["Style existing form sections with help, units and validation constraints", "Preserve project-defined security policy values and permissions", "The dedicated admin navigation and section composition is PROPOSED optional guidance until admin-sections support is implemented and verified"],
+  "interaction_requirements": ["Define scope of save, cancel and reset before implementation", "Do not infer successful writes from observed source buttons", "Use existing confirmed validation and error feedback"],
+  "responsive_rules": [{"status": "PROPOSED", "condition": "narrow viewport", "behavior": "Stack sections with labels before controls and accessible action targets"}],
+  "required_capabilities": ["design-tokens"],
+  "source_evidence_ids": ["OBS-ADMIN"]
+}

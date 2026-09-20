@@ -1,0 +1,18 @@
+{
+  "pattern_id": "entity-tabs",
+  "family": "BUSINESS",
+  "supported_purposes": ["DETAIL"],
+  "regions": [
+    {"region_id": "identity", "columns": 12, "order": 1},
+    {"region_id": "details", "columns": 12, "order": 2}
+  ],
+  "blocks": [
+    {"block_id": "entity-summary", "region_id": "identity", "component": "meta-summary", "content_role": "selected_entity"},
+    {"block_id": "entity-sections", "region_id": "details", "component": "description-list", "content_role": "confirmed_entity_sections"}
+  ],
+  "content_requirements": ["Summary and detail sections refer to the same project record ID", "Include only RFP-confirmed sections and preserve existing user answers", "Entity tabs are PROPOSED optional guidance; use the existing detail section until entity-tabs support is explicitly implemented and verified"],
+  "interaction_requirements": ["Detail navigation preserves the selected record", "Back returns to the existing list route", "Observed source tabs are not proof of working internal behaviors"],
+  "responsive_rules": [{"status": "PROPOSED", "condition": "narrow viewport", "behavior": "Preserve selected record and stack existing detail sections in reading order"}],
+  "required_capabilities": ["record-navigation"],
+  "source_evidence_ids": ["OBS-DETAIL"]
+}

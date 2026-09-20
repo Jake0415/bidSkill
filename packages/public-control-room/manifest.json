@@ -1,0 +1,24 @@
+{
+  "schema_version": "1",
+  "package_id": "public-control-room",
+  "version": "1.0.0",
+  "display_name": "공공 관제형 · SMART-SIC 참조",
+  "description": "관찰한 관제·목록·객체 상세·관리 화면의 표현 가이드. 확정 업무 정의와 사용자 수정을 보존합니다.",
+  "site_types": ["control_room", "public_admin"],
+  "runtime_contract": "publishing-layout/1",
+  "required_capabilities": ["grouped-layout", "filter-table", "record-navigation", "design-tokens"],
+  "optional_capabilities": ["gis-map", "workspace-tabs", "entity-tabs", "admin-sections"],
+  "skills": {
+    "navigation": "skills/navigation/SKILL.md",
+    "composition": "skills/composition/SKILL.md",
+    "design": "skills/design/SKILL.md",
+    "interaction": "skills/interaction/SKILL.md",
+    "verification": "skills/verification/SKILL.md"
+  },
+  "references": ["references/observations.md"],
+  "tokens": "design/tokens.json",
+  "patterns": ["patterns/control.json", "patterns/list-detail.json", "patterns/entity-tabs.json", "patterns/settings.json"],
+  "previews": [],
+  "checks": "checks/rules.json",
+  "license": "LicenseRef-Organization-Internal"
+}

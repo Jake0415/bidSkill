@@ -1,0 +1,19 @@
+{
+  "pattern_id": "filter-table",
+  "family": "BUSINESS",
+  "supported_purposes": ["LIST_SEARCH"],
+  "regions": [
+    {"region_id": "search", "columns": 12, "order": 1},
+    {"region_id": "results", "columns": 12, "order": 2}
+  ],
+  "blocks": [
+    {"block_id": "filters", "region_id": "search", "component": "filter-panel", "content_role": "confirmed_search_fields"},
+    {"block_id": "result-table", "region_id": "results", "component": "data-table", "content_role": "confirmed_result_columns"},
+    {"block_id": "result-actions", "region_id": "results", "component": "action-bar", "content_role": "permitted_actions"}
+  ],
+  "content_requirements": ["Keep approved filter and column IDs", "Show count, empty results and error state distinctly", "Use synthetic records only when explicitly marked as examples"],
+  "interaction_requirements": ["Filters must change the displayed result set", "Reset clears only search inputs and pagination", "Detail navigation preserves selected record identity"],
+  "responsive_rules": [{"status": "PROPOSED", "condition": "narrow viewport", "behavior": "Stack search controls and keep table headers and scrolling accessible"}],
+  "required_capabilities": ["filter-table"],
+  "source_evidence_ids": ["OBS-LIST"]
+}
